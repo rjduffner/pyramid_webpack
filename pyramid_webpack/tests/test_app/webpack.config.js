@@ -3,7 +3,7 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ManifestRevisionPlugin = require('manifest-revision-webpack-plugin');
 
-var rootAssetPath = './assets';
+var rootAssetPath = './test_app/static';
 
 module.exports = {
     entry: {
@@ -15,7 +15,7 @@ module.exports = {
         ]
     },
     output: {
-        path: './build/public',
+        path: './test_app/build',
         publicPath: 'http://localhost:2992/assets/',
         filename: '[name].[chunkhash].js',
         chunkFilename: '[id].[chunkhash].js'
@@ -44,7 +44,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('[name].[chunkhash].css'),
-        new ManifestRevisionPlugin(path.join('build', 'manifest.json'), {
+        new ManifestRevisionPlugin(path.join('test_app', 'build', 'manifest.json'), {
             rootAssetPath: rootAssetPath,
             ignorePaths: ['/styles', '/scripts']
         })

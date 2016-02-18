@@ -14,6 +14,8 @@ eggs/
 parts/
 sdist/
 var/
+node_modules/
+
 npm-debug.log
 *.egg-info/
 .installed.cfg

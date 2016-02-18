@@ -5,21 +5,24 @@ import sys
 try:
     from setuptools import setup
 except ImportError:
-    print('Flask-Webpack needs setuptools in order to build. ' +
+    print('Pyramid-Webpack needs setuptools in order to build. ' +
           'Install it using your package manager ' +
           '(usually python-setuptools) or via pip (pip install setuptools).')
     sys.exit(1)
 
-setup(name='Flask-Webpack',
+setup(name='Pyramid-Webpack',
       version=open('VERSION', 'r').read()[:-1],
-      author='Nick Janetakis',
-      author_email='nick.janetakis@gmail.com',
-      url='https://github.com/nickjj/flask-webpack',
-      description='Flask extension for managing assets with Webpack.',
+      author='Robert Duffner',
+      author_email='rjduffner@gmail.com',
+      url='https://github.com/rjduffner/pyramid_webpack',
+      description='Pyramid extension for managing assets with Webpack.',
       license='GPLv3',
-      install_requires=['setuptools', 'Flask'],
+      install_requires=[
+            'setuptools',
+            'pyramid'
+      ],
       tests_require=['pytest'],
-      packages=['flask_webpack'],
-      package_data={'Flask-Webpack': ['VERSION']},
+      packages=['pyramid_webpack'],
+      package_data={'Pyramid-Webpack': ['VERSION']},
       zip_safe=False,
       data_files=[])

@@ -44,38 +44,15 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(2);
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/* 1 */,
+/* 2 */
+/***/ function(module, exports) {
 
-	__webpack_require__(5)(__webpack_require__(6))
-
-/***/ },
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	module.exports = function(src) {
-		if (typeof execScript === "function")
-			execScript(src);
-		else
-			eval.call(null, src);
-	}
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = "(function() {\n    var ele = document.getElementById('hello');\n    ele.innerHTML = 'Hello (with javascript)';\n})();\n"
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
