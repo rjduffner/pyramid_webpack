@@ -1,0 +1,19 @@
+{%- macro get_stylesheet_bundle_url(spec) -%}
+{%- endmacro -%}
+
+{%- macro get_javascript_bundle_url(spec) -%}
+{%- endmacro -%}
+
+{%- macro get_stylesheet_url(spec) -%}
+    {% set asset_url = request.get_asset_url(spec) %}
+    {%- if asset_url -%}
+        <link type="text/css" rel="stylesheet" href="{{ asset_url }}">
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro get_javascript_url(spec) -%}
+    {% set asset_url = request.get_asset_url(spec) %}
+    {%- if asset_url -%}
+        <script src="{{ request.get_asset_url(spec) }}"></script>
+    {%- endif -%}
+{%- endmacro -%}

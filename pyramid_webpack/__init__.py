@@ -79,6 +79,10 @@ def includeme(config):
             "Pyramid-Webpack requires 'webpack_manifest_path' to be set and "
             "it must point to a valid json file.")
 
+    config.add_request_method(get_asset_url, 'get_asset_url')
+
+    # DEPRECATE THIS AND USE MACROS INSTEAD
+    ################################################################################
     config.add_request_method(get_stylesheet_bundle, 'assets_get_stylesheet_bundle')
     config.add_request_method(get_javascript_bundle, 'assets_get_javascript_bundle')
-    config.add_request_method(get_asset_url, 'assets_get_asset_url')
+    ################################################################################
