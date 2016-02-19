@@ -1,0 +1,21 @@
+{% from "pyramid_webpack:macros/tags.jinja2" import
+    get_stylesheet_url,
+    get_javascript_url
+    with context
+%}
+
+<!doctype html>
+<html lang="">
+<head>
+  <title>Test application</title>
+   {{ get_stylesheet_url('app_css.css') }}
+</head>
+<body>
+<p id="hello">Hello (without javascript)</p>
+
+<img src="{{ request.get_asset_url('images/dog/no-idea.jpg') }}"
+     width="600" height="434" alt="No idea">
+{{ get_javascript_url('app_js.js') }}
+
+</body>
+</html>

@@ -3,12 +3,13 @@ from setuptools import setup, find_packages
 requires = [
     'pyramid',
     'pyramid_jinja2',
+    'pyramid_webpack',
     'waitress',
     ]
 
-setup(name='test_app',
+setup(name='helloworld',
       version='0.0',
-      description='test_app',
+      description='helloworld',
       long_description="",
       classifiers=[
         "Programming Language :: Python",
@@ -25,9 +26,9 @@ setup(name='test_app',
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
-      test_suite="test_app",
+      test_suite="helloworld",
       entry_points="""\
       [paste.app_factory]
-      main = test_app:main
+      main = helloworld:main
       """,
       )
